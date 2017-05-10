@@ -7,4 +7,9 @@ class PlaylistsController < ApplicationController
     render json: playlists
   end
 
+  def favourites
+    favourites = current_user.favourites
+    render json: favourites
+  end
+
 end
